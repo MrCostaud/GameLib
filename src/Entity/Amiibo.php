@@ -23,7 +23,7 @@ class Amiibo
     private ?string $imgAmiibo = null;
 
     #[ORM\ManyToOne]
-    private ?etat $post = null;
+    private ?etat $etatAmiibo = null;
 
     public function getId(): ?int
     {
@@ -68,12 +68,12 @@ class Amiibo
 
     public function getPost(): ?etat
     {
-        return $this->post;
+        return $this->etatAmiibo;
     }
 
     public function setPost(?etat $post): static
     {
-        $this->post = $post;
+        $this->etatAmiibo = $post;
 
         return $this;
     }

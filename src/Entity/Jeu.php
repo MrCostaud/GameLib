@@ -23,11 +23,11 @@ class Jeu
     private ?string $imgJeu = null;
 
     #[ORM\ManyToOne(inversedBy: 'jeus')]
-    private ?console $post = null;
+    private ?console $consoleJeu = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?etat $postjeu = null;
+    private ?etat $etatJeu = null;
 
     public function getId(): ?int
     {
@@ -72,24 +72,24 @@ class Jeu
 
     public function getPost(): ?console
     {
-        return $this->post;
+        return $this->consoleJeu;
     }
 
     public function setPost(?console $post): static
     {
-        $this->post = $post;
+        $this->consoleJeu = $post;
 
         return $this;
     }
 
     public function getPostjeu(): ?etat
     {
-        return $this->postjeu;
+        return $this->etatJeu;
     }
 
     public function setPostjeu(?etat $postjeu): static
     {
-        $this->postjeu = $postjeu;
+        $this->etatJeu = $postjeu;
 
         return $this;
     }

@@ -25,7 +25,7 @@ class Console
     private ?string $imgConsole = null;
 
     #[ORM\ManyToOne]
-    private ?etat $post = null;
+    private ?etat $etatConsole = null;
 
     public function getId(): ?int
     {
@@ -70,12 +70,12 @@ class Console
 
     public function getPost(): ?etat
     {
-        return $this->post;
+        return $this->etatConsole;
     }
 
     public function setPost(?etat $post): static
     {
-        $this->post = $post;
+        $this->etatConsole = $post;
 
         return $this;
     }
