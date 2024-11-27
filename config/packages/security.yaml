@@ -23,9 +23,10 @@ security:
         path: logout
         target: /
       custom_authenticator: App\Security\LoginFormAuthenticator
+      entry_point: App\Security\LoginFormAuthenticator
 
       remember_me:
-        secret: '%kernel.secret%'
+        secret: "%kernel.secret%"
         lifetime: 604800
         path: /
         # by default, the feature is enabled by checking a checkbox in the
