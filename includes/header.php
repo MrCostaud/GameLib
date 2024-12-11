@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <title>GameLib</title>
     <link href="includes/css/style-header.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="haut">
         <div class="name">
@@ -19,7 +21,7 @@
         <div class="navbar">
             <div class="elements">
                 <a href="index.php?uc=accueil&action=accueil">Accueil</a>
-                
+
                 <!-- Dropdown for Consultation -->
                 <div class="dropdown">
                     <button class="dropbtn">
@@ -28,7 +30,7 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="index.php?uc=consultation&action=jeux">Jeux</a>
-                        <a href="index.php?uc=consultation&action=console">Console</a>
+                        <a href="index.php?uc=console&action=console">Console</a>
                         <a href="index.php?uc=consultation&action=amiibo">Amiibo</a>
                     </div>
                 </div>
@@ -49,4 +51,5 @@
         </div>
     </div>
 </body>
+
 </html>
