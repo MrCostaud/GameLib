@@ -6,6 +6,10 @@ if (isset($uc)) {
             include "controleurs/c_accueil.php";
             break;
         }
+        case "connexion": {
+            include "controleurs/c_connexion.php";
+            break;
+        }
     }
 }
 ?>
