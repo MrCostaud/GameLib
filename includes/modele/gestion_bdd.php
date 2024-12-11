@@ -16,22 +16,36 @@ function getAcces($username, $password)
     }
 }
 
+<<<<<<< HEAD
 function addJeu($console, $etat, $jeu, $image)
 {
     require "connexion.php";
     $sql = "Insert into jeu values($console, $etat, $jeu, $image)";
+=======
+function addAmiibo($etat, $nom, $img)
+{
+    require "connexion.php";
+    $sql = "insert into amiibo values($etat, $nom, $img)";
+>>>>>>> origin/dev
     $exec = $bdd->prepare($sql);
     $exec->execute();
 }
 
+<<<<<<< HEAD
 function modifJeu($idjeu, $console, $etat, $jeu, $image)
 {
     require "connexion.php";
     $sql = "Update jeu set console_jeu_id=$console, etat_jeu_id=$etat, nom_jeu=$jeu, img_jeu$image where id=$idjeu";
+=======
+function modifAmiibo($idAmiibo, $etat, $nom, $img) {
+    require "connexion.php";
+    $sql = "UPDATE amiibo SET etat_amiibo_id=$etat, nom_amiibo=$nom, img_amiibo=$img where id=$idAmiibo";
+>>>>>>> origin/dev
     $exec = $bdd->prepare($sql);
     $exec->execute();
 }
 
+<<<<<<< HEAD
 function suppJeu($idjeu)
 {
     require "connexion.php";
@@ -60,6 +74,12 @@ function suppConsole($idconsole)
 {
     require "connexion.php";
     $sql = "Delete from console where id=$idconsole";
+=======
+function suppAmiibo($idAmiibo)
+{
+    require "connexion.php";
+    $sql = "delete from amiibo where id=$idAmiibo";
+>>>>>>> origin/dev
     $exec = $bdd->prepare($sql);
     $exec->execute();
 }
