@@ -7,5 +7,6 @@ switch ($action) {
             include "vues/v_consultation_amiibo.php";
             break;
         }
+        
 }
 ?>

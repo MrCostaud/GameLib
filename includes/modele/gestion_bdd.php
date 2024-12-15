@@ -31,7 +31,7 @@ function getAllConsoles()
 function getAllAmiibo()
 {
     require "connexion.php";
-    $sql = "SELECT etat_amiibo_id, nom_amiibo, img_amiibo, etat FROM amiibo  INNER JOIN etat on etat_amiibo_id = etat.id";
+    $sql = "SELECT amiibo.id, etat_amiibo_id, nom_amiibo, img_amiibo, etat FROM amiibo  INNER JOIN etat on etat_amiibo_id = etat.id";
     $exec = $bdd->prepare($sql);
     $exec->execute();
     $curseur = $exec->fetchAll();
@@ -108,6 +108,10 @@ function modifConsole($idconsole, $etat, $console, $image)
 function suppConsole($idconsole)
 {
     require "connexion.php";
+    $sql = "Delete from jeu where console_jeu_id=$idconsole";
+    $exec = $bdd->prepare($sql);
+    $exec->execute();
+
     $sql = "Delete from console where id=$idconsole";
     $exec = $bdd->prepare($sql);
     $exec->execute();

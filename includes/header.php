@@ -34,18 +34,22 @@
                         <a href="index.php?uc=amiibo&action=amiibo">Amiibo</a>
                     </div>
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        Gestion
-                        <span>▼</span>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="index.php?uc=consultation&action=jeux">Insertion</a>
-                        <a href="index.php?uc=consultation&action=console">Modification</a>
+                <?php
+                if ($_SESSION['autorisation'] == 1) {
+                ?>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Gestion
+                            <span>▼</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="index.php?uc=gestion&action=insertion">Insertion</a>
+                            <a href="index.php?uc=gestion&action=modif">Modification</a>
+                        </div>
                     </div>
-                </div>
-
+                <?php
+                }
+                ?>
                 <a href="index.php?uc=modisup&action=modisup">Statistiques</a>
             </div>
         </div>
