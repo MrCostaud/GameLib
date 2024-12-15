@@ -14,5 +14,13 @@ if (isset($uc)) {
                 include "controleurs/c_console.php";
                 break;
             }
+        case "jeux": {
+            include "controleurs/c_jeu.php";
+            break;
+        }   
+        case "amiibo": {
+            include "controleurs/c_amiibo.php";
+            break;
+        }    
     }
 }

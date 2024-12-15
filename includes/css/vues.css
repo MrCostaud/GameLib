@@ -5,7 +5,6 @@ body {
 .container-main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
     box-sizing: border-box;
 }
  
@@ -28,7 +27,6 @@ body {
 .container-main h2 {
     margin-bottom: 20px;
     text-align: center;
-    padding: 10px;
     font-size: 2em;
     color: black;
     text-decoration: underline;
@@ -356,6 +354,7 @@ th {
     text-decoration: none;
     margin: 5px;
     text-align: center;
+    justify-content: center;
 }
 
 .btn-deconnexion-header{
@@ -380,6 +379,54 @@ th {
     gap: 20px;
     justify-content: flex-start;
 }
+/* Conteneur principal pour la collection de jeux */
+.container-main {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Conteneur des jeux pour un affichage en ligne (Flexbox) */
+.jeux-container {
+    display: flex;
+    flex-wrap: wrap; /* Pour permettre l'enroulement des éléments */
+    gap: 20px; /* Espacement entre les jeux */
+    justify-content: center; /* Centrer les jeux horizontalement */
+    padding: 10px;
+}
+
+/* Style pour chaque jeu */
+.jeux-box {
+    width: 30%; /* 3 jeux par ligne */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image du jeu - Ajustement de taille uniforme */
+.jeux-box img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 400px; /* Fixer une hauteur fixe pour les images */
+    object-fit: cover; /* Assurez-vous que l'image remplit le conteneur sans déformation */
+    margin-bottom: 10px;
+}
+
+/* Titre du jeu */
+.jeux-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.console-container {
+    display: flex;
+    flex-wrap: wrap; /* Pour permettre l'enroulement des éléments */
+    gap: 20px; /* Espacement entre les jeux */
+    justify-content: center; /* Centrer les jeux horizontalement */
+    padding: 10px;
+}
 
 /* Encadré d'une console */
 .console-box {
@@ -395,9 +442,10 @@ th {
 
 /* Image des consoles */
 .console-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 400px; /* Fixer une hauteur fixe pour les images */
+    object-fit: cover; /* Assurez-vous que l'image remplit le conteneur sans déformation */
+    margin-bottom: 10px;
 }
 
 /* Titre de la console */

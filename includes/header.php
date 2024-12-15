@@ -29,9 +29,9 @@
                         <span>▼</span>
                     </button>
                     <div class="dropdown-content">
-                        <a href="index.php?uc=consultation&action=jeux">Jeux</a>
+                        <a href="index.php?uc=jeux&action=jeux">Jeux</a>
                         <a href="index.php?uc=console&action=console">Console</a>
-                        <a href="index.php?uc=consultation&action=amiibo">Amiibo</a>
+                        <a href="index.php?uc=amiibo&action=amiibo">Amiibo</a>
                     </div>
                 </div>
 

@@ -31,7 +31,7 @@ function getAllConsoles()
 function getAllAmiibo()
 {
     require "connexion.php";
-    $sql = "SELECT * FROM amiibo";
+    $sql = "SELECT etat_amiibo_id, nom_amiibo, img_amiibo, etat FROM amiibo  INNER JOIN etat on etat_amiibo_id = etat.id";
     $exec = $bdd->prepare($sql);
     $exec->execute();
     $curseur = $exec->fetchAll();
@@ -119,6 +119,29 @@ function suppAmiibo($idAmiibo)
     $sql = "delete from amiibo where id=$idAmiibo";
     $exec = $bdd->prepare($sql);
     $exec->execute();
+}
+
+function getEtat($idetat)
+{
+    require "connexion.php";
+    $sql = "SELECT etat FROM etat WHERE id = :id";
+    $exec = $bdd->prepare($sql);
+    $exec->bindParam(':id', $idetat, PDO::PARAM_INT); // Sécurisation via bindParam
+    $exec->execute();
+    $curseur = $exec->fetch(PDO::FETCH_ASSOC); // Récupère un tableau associatif
+    return $curseur['etat'] ?? null; // Retourne la valeur ou null si non trouvé
+}
+
+
+function getConsole($idconsole)
+{
+    require "connexion.php";
+    $sql = "SELECT nom_console FROM console WHERE id = :id";
+    $exec = $bdd->prepare($sql);
+    $exec->bindParam(':id', $idconsole, PDO::PARAM_INT); // Sécurisation via bindParam
+    $exec->execute();
+    $curseur = $exec->fetch(PDO::FETCH_ASSOC); // Récupère un tableau associatif
+    return $curseur['nom_console'] ?? null; // Retourne la valeur ou null si non trouvé
 }
 
 
