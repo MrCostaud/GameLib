@@ -14,6 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['jeu_id'])) {
 <link href="includes/css/vues.css" rel="stylesheet">
 <style>
 
+.formConsole {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -109,6 +116,7 @@ button:hover {
 
 <body>
 <h1>Ajouter une Nouvelle Console</h1>
+<div class="formConsole">
     <form action="index.php?uc=gestion&action=ajouterConsole" method="post">
         <div>
             <label for="nom">Nom de la Console :</label>
@@ -135,4 +143,5 @@ button:hover {
             <button type="submit">Ajouter la Console</button>
         </div>
     </form>
+</div>
 </body>

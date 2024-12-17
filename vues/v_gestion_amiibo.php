@@ -14,6 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['jeu_id'])) {
 <link href="includes/css/vues.css" rel="stylesheet">
 <style>
 
+.formAmiibo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -109,6 +116,7 @@ button:hover {
 
 <body>
 <h1>Ajouter un Amiibo</h1>
+<div class="formAmiibo">
     <form action="index.php?uc=gestion&action=ajouterAmiibo" method="post">
         <div>
             <label for="nom">Nom de l'Amiibo :</label>
@@ -135,4 +143,5 @@ button:hover {
             <button type="submit">Ajouter l'Amiibo</button>
         </div>
     </form>
+</div>
 </body>
