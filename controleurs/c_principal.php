@@ -21,6 +21,10 @@ if (isset($uc)) {
         case "amiibo": {
             include "controleurs/c_amiibo.php";
             break;
-        }    
+        }  
+        case "gestion": {
+            include "controleurs/c_gestion.php";
+            break;
+        }   
     }
 }

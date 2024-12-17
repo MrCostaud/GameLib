@@ -6,7 +6,7 @@ include "includes/header.php";
     <div class="container-main">
         <h2 style="color: #111; margin:0px; padding:0px;">Collection de Mr Dallier</h2>
     </div>
-    <img style="max-height: 350px; width: 1536px;"src="includes/img/fond.png">
+    <img style="max-height: 350px; width: 100%;"src="includes/img/fond.png">
 </body>
 <footer>
     <?php
