@@ -43,8 +43,9 @@
                             <span>▼</span>
                         </button>
                         <div class="dropdown-content">
-                            <a href="index.php?uc=gestion&action=insertion">Insertion</a>
-                            <a href="index.php?uc=gestion&action=modif">Modification</a>
+                            <a href="index.php?uc=gestion&action=jeux">Insertion Jeux</a>
+                            <a href="index.php?uc=gestion&action=console">Insertion Console</a>
+                            <a href="index.php?uc=gestion&action=amiibo">Insertion Amiibo</a>
                         </div>
                     </div>
                 <?php
